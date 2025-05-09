@@ -16,27 +16,23 @@ function App() {
     '/images/5.jpeg'
   ];
 
+
   return (
     <>
-      <div>
-        {images.map((image, index) => (
-          <img key={index} src={image} className="pic" alt={`Photo ${index + 1}`} />
-        ))}
-        <img src="/1.jpeg" className="pic" alt="表示したい"/>
-      </div>
-    
+
+
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
-        
+
         </a>
-        
+
       </div>
       <h1>タイトル</h1>
       <div className="card">
-        
+
         <p>
           いりません
         </p>
@@ -48,7 +44,16 @@ function App() {
       <Hello />  {/* Hello コンポーネントを表示 */}
       <Counter/>
       <InputBox/>
-      <TodoApp/> 
+      <TodoApp/>
+
+      <div>
+        {images.map((image, index) => (
+          <img key={index} src={image} className="pic" alt={`Photo ${index + 1}`} />
+        ))}
+        <img src="/1.jpeg" className="pic" alt="表示したい"/>
+      </div>
+
+
     </>
   );
 }
